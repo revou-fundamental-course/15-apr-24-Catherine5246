@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Temperature Converter</title>
+    </head>
+
+    <body>
+        <script src="js/script.js"></script>
+        <main>
+            <header>
+                <h1 class="container">Temperature Converter</h1>   
+            </header>
+
+            <section class="conversion">
+                <label for = "original">Convert
+                    <select id="original">
+                        <option value="C">Celsius (&deg;C)</option>
+                        <option value="F">Fahrenheit (&deg;F)</option>
+                        <option value="K">Kelvin (&deg;K)</option>
+                    </select>
+                    to
+                </label>
+                <label for = "converted">
+                    <select id="converted">
+                        <option value="C">Celsius (&deg;C)</option>
+                        <option value="F">Fahrenheit (&deg;F)</option>
+                        <option value="K">Kelvin (&deg;K)</option>
+                    </select>
+                </label>
+                <label for = "number">
+                <input type="number" class="number" id ="number" value="number" required placeholder="please type the temperature you wish to convert here...">
+                </label>
+                <br>
+                <button id="convert" type="button" value="convert" onclick="convert()">Convert</button>
+                <button id="reset" type="button" value="reset" onclick="reset()">Reset</button>
+                <button id="reverse" type="button" value="reverse" onclick="reverse()">Reverse</button>
+
+            </section>
+
+            <section class="section-result">
+                <label for="result"> Result
+                    <br>
+                    <input type = "text" id="result" readonly>
+                </label>
+            </section>
+
+            <section> 
+                <label for = "method"> Method of Conversion
+                    <br>
+                    <input id = "method" type = "text" readonly>
+                </label>
+            </section>
+
+            <section>
+                <article>
+                <h3>Formula</h3>
+                    <div class="formuladiv">
+                        <ul>From Celsius to :</ul>
+                            <li>Fahrenheit = (&deg;C + 9/5) +32</li>
+                            <li>Kelvin = (&deg;C + 273.15)</li>
+                        <ul>From Fahrenheit to :</ul>
+                            <li>Celsius = (&deg;F - 32)*5/9</li>
+                            <li>Kelvin = (&deg;F - 32)*5/9 + 273.15</li>
+                        <ul>From Kelvin to :</ul>
+                            <li>Celsius = (&deg;K - 273.15)</li>
+                            <li>Fahrenheit = (&deg;K - 273.15) *9/5 + 32</li>
+                    </div>
+                </article>  
+            </section>
+
+        </main>
+    </body>
+    <hr>
+    <footer><div>By : Catherine Wijaya</footer>
+
+</html>
